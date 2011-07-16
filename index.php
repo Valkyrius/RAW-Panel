@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>RAW-Panel Index page</title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        echo "Hello World!";
-        ?>
-    </body>
-</html>
+<?php
+
+// change the following paths if necessary
+$yii=dirname(__FILE__).'/../YII/framework/yii.php';
+$config=dirname(__FILE__).'/protected/config/main.php';
+
+// remove the following lines when in production mode
+defined('YII_DEBUG') or define('YII_DEBUG',true);
+// specify how many levels of call stack should be shown in each log message
+defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3);
+
+require_once($yii);
+Yii::createWebApplication($config)->run();
